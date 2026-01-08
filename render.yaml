@@ -3,8 +3,7 @@ services:
     name: n8n
     env: docker
     plan: free
-    image: n8nio/n8n:latest
-    startCommand: "n8n start"
+    dockerfilePath: ./Dockerfile
     envVars:
       - key: N8N_BASIC_AUTH_ACTIVE
         value: true
