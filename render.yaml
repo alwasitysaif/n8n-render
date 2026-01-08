@@ -3,7 +3,7 @@ services:
     name: n8n
     env: docker
     plan: free
-    dockerfilePath: ./Dockerfile
+    dockerImage: n8nio/n8n:latest
     envVars:
       - key: N8N_BASIC_AUTH_ACTIVE
         value: true
@@ -12,10 +12,8 @@ services:
       - key: N8N_BASIC_AUTH_PASSWORD
         value: Kainisthbest@1979
       - key: N8N_ENCRYPTION_KEY
-        value: bS9d9XH9SDfhs9879fds7fh9ds789f78dsH9f
+        value: b59d9xh95dhf9879fdsh789d78dsh9f
       - key: WEBHOOK_URL
         value: https://n8n-padel.onrender.com/
       - key: GENERIC_TIMEZONE
         value: Europe/Bucharest
-    ports:
-      - 80
