@@ -13,4 +13,4 @@ ENV N8N_ENCRYPTION_KEY=b59d9xh95dhf9879fdsh789d78dsh9f
 ENV WEBHOOK_URL=https://n8n-render-1.onrender.com/
 
 # Start n8n
-CMD ["tini", "--", "n8n", "start"]
+CMD ["n8n", "start"]
