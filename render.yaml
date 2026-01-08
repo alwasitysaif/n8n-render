@@ -11,7 +11,5 @@ services:
         value: admin
       - key: N8N_BASIC_AUTH_PASSWORD
         value: Kainisthbest@1979
-      - key: N8N_ENCRYPTION_KEY
-        value: b59d9xh95dhf9879fdsh789d78dsh9f
       - key: GENERIC_TIMEZONE
         value: Europe/Bucharest
