@@ -1,13 +1,16 @@
-# Use official n8n Docker image
+# Use the official n8n Docker image
 FROM n8nio/n8n:latest
 
-# Expose port for Render
+# Expose the default n8n port
 EXPOSE 5678
 
-# Set environment variables
+# Environment setup
 ENV NODE_ENV=production
-ENV WEBHOOK_URL=https://n8n-padel.onrender.com/
+ENV N8N_BASIC_AUTH_ACTIVE=true
+ENV N8N_BASIC_AUTH_USER=admin
+ENV N8N_BASIC_AUTH_PASSWORD=Kainisthbest@1979
 ENV N8N_ENCRYPTION_KEY=b59d9xh95dhf9879fdsh789d78dsh9f
+ENV WEBHOOK_URL=https://n8n-render-1.onrender.com/
 
 # Start n8n
-CMD ["n8n", "start"]
+CMD ["tini", "--", "n8n", "start"]
